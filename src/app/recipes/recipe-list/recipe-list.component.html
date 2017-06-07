@@ -5,7 +5,8 @@
     <div class="col-xs-12">
 
         <!-- New Recepe Button -->
-        <button class="btn btn-success">New Recipe</button>
+        <button class="btn btn-success"
+                (click)="onNewRecipe()">New Recipe</button>
         <!--// New Recepe Button -->
 
     </div>
@@ -16,8 +17,9 @@
 
         <!-- Recipe Item -->
         <app-recipe-item 
-            *ngFor="let recipeEl of recipes" 
-            [recipe]="recipeEl"></app-recipe-item>
+            *ngFor="let recipeEl of recipes; let i = index" 
+            [recipe]="recipeEl"
+            [index]="i"></app-recipe-item>
         <!--// Recipe Item --> 
         
     </div>
